@@ -209,6 +209,8 @@ public class MainWindow extends UiPart<Stage> {
     @FXML
     private void handleMeetUpList() {
         meetUpListPanel = new MeetUpListPanel(logic.getFilteredMeetUpList(), logic.getMeetUpList().getMeetUpList());
+
+        meetUpListPanelPlaceholder.getChildren().clear();
         meetUpListPanelPlaceholder.getChildren().add(meetUpListPanel.getRoot());
 
         buyerListPanel.getRoot().setVisible(false);
